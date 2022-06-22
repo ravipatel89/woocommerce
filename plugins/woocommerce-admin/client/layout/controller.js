@@ -23,6 +23,7 @@ import { Spinner } from '@woocommerce/components';
 import getReports from '../analytics/report/get-reports';
 import { getAdminSetting } from '~/utils/admin-settings';
 import { NoMatch } from './NoMatch';
+import { ManageProducts } from '../products';
 
 const AnalyticsReport = lazy( () =>
 	import( /* webpackChunkName: "analytics-report" */ '../analytics/report' )
@@ -123,6 +124,19 @@ export const getPages = () => {
 				id: 'woocommerce-analytics-customers',
 			},
 			capability: 'view_woocommerce_reports',
+		} );
+		pages.push( {
+			container: ManageProducts,
+			path: '/products',
+			breadcrumbs: [
+				...initialBreadcrumbs,
+				__( 'Products', 'woocommerce' ),
+			],
+			wpOpenMenu: 'toplevel_page_woocommerce',
+			navArgs: {
+				id: 'woocommerce-analytics-products',
+			},
+			capability: 'manage_woocommerce',
 		} );
 		pages.push( {
 			container: AnalyticsReport,

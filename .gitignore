@@ -95,3 +95,4 @@ allure-results
 
 # Turborepo
 .turbo
+config.bat
