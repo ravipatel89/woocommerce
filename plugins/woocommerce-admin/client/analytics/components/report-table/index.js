@@ -53,11 +53,7 @@ const ReportTable = ( props ) => {
 		primaryData,
 		tableData,
 		endpoint,
-		// These props are not used in the render function, but are destructured
-		// so they are not included in the `tableProps` variable.
-		// eslint-disable-next-line no-unused-vars
 		itemIdField,
-		// eslint-disable-next-line no-unused-vars
 		tableQuery,
 		compareBy,
 		compareParam,
