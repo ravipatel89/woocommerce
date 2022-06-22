@@ -1,7 +1,7 @@
 ## Callback Registration
 
 
-### A Listener that implements ActionListener or FilterListener
+### A Listener that implements HandleActions or HandleFilters
 ```php
 return [
     'action_name' => [
